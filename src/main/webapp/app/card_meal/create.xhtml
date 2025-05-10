@@ -1,0 +1,51 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/template.xhtml">
+    <h:head>
+        <title>تعديل الوجبة</title>
+    </h:head>
+
+    <ui:define name="content">
+        <h:form id="form" dir="RTL" >
+            <p:growl id="messages" showDetail="true"/>
+            <div class="card">
+                <h3>بطاقة وجبة الطعام</h3>
+            <div class="ui-fluid p-formgrid p-grid ">
+                <div class="p-field p-col-3 p-md:col-3">
+                    <label for="c1"> اسم الاكلة</label>
+                    <p:inputText id="c1" value="#{mealCardController.meal_card.ingredients}" />
+                </div>
+                <div class="p-field p-col-3 p-md:col-3">
+                    <label for="c2">السعر</label>
+                    <p:inputText id="c2" value="#{mealCardController.meal_card.price}" />
+                </div>
+                <div class="p-field p-col-3 p-md:col-3">
+                    <label for="mealType">وقت تقديم الوجبة</label>
+                    <p:selectOneMenu id="mealType" value="#{mealCardController.meal_card.serving_meal}" >
+                        <f:selectItem itemValue="" itemLabel="-- اختر --" />
+                        <f:selectItem itemValue="الفطور" itemLabel="الفطور" />
+                        <f:selectItem itemValue="الغداء" itemLabel="الغداء" />
+                        <f:selectItem itemValue="العشاء" itemLabel="العشاء" />
+                    </p:selectOneMenu>
+                </div>
+                <div class="p-field p-col-3 p-md:col-3">
+                    <p:outputLabel value="تفاصيل الوجبة  " />
+                    <p:inputTextarea id="txt" value="#{mealCardController.meal_card.details}"  />
+                </div>
+                <div class="p-field p-col-12 p-md:col-3">
+                    <p:outputLabel value="رفع الصورة: " />
+                    <p:fileUpload listener="#{mealCardController.uploadFile}"
+                                  mode="advanced" value="رفع الصورة" skinSimple="true"  style="border: none"
+                                  process="@this" update="messages" />
+                </div>
+                <div class="p-field p-col-2 p-md:col-3">
+                    <p:commandButton value="حفظ" process="@form" update="form" actionListener="#{mealCardController.saveInDB()}" styleClass="mr-2"/>
+            </div>
+            </div>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>

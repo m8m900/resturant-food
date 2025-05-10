@@ -1,0 +1,40 @@
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:po="http://primefaces.org/poseidon">
+
+    <div class="menu-wrapper">
+        <div class="layout-menu-container">
+            <h:form id="menuform">
+                <po:menu widgetVar="PoseidonMenuWidget">
+                        <p:menuitem id="om_dashboard" value="الصفحة الرئيسية" icon="pi pi-home" outcome="/app/dashboard/dashboard.xhtml" />
+                    <p:submenu id="x" label="الحجوزات " >
+                    <p:menuitem id="myhome" value="اضافة الحجوزات" icon="pi pi-plus" outcome="/app/order/cartMenu" />
+                    </p:submenu>
+
+                    <p:submenu id="d" label="بطاقة المطبخ " >
+                        <p:menuitem id="d1" value="اضافة وجبة" icon="pi pi-plus" outcome="/app/card_meal/cardOfMeal" />
+                        <p:menuitem id="d2" value="جدول اضافة الوجبة" icon="pi pi-list" outcome="/app/card_meal/table_CardOfMeal" />
+                    </p:submenu>
+                    <p:submenu id="m" label="بطاقة المطعم ">
+                        <p:menuitem id="m1" value="اضافة وجبات لأيام الاسبوع " icon="pi pi-plus" outcome="/app/cardOfRestaurant/cooker" />
+                        <p:menuitem id="m2" value="جدول ايام الوجبات" icon="pi pi-list" outcome="/app/cardOfRestaurant/table_cooker" />
+                    </p:submenu>
+
+                        <p:menuitem id="a1" value="اضافة id" icon="pi pi-plus" outcome="/app/userAcount/userAcount" />
+
+
+                        <p:menuitem id="s1" value="الاعدادت " icon="pi pi-cog" outcome="/app/order/sitings" />
+                    <p:menuitem id="s11" value="القطع" icon="pi pi-cog" outcome="/app/cuttingMeal/cuttingMeal" />
+
+
+
+                </po:menu>
+            </h:form>
+        </div>
+    </div>
+
+</ui:composition>

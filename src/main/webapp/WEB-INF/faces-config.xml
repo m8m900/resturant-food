@@ -1,0 +1,26 @@
+<faces-config version="4.0" xmlns="https://jakarta.ee/xml/ns/jakartaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                                  https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_4_0.xsd">
+    <name>primefaces_poseidon</name>
+
+    <component>
+        <component-type>org.primefaces.component.PoseidonMenu</component-type>
+        <component-class>org.primefaces.poseidon.component.PoseidonMenu</component-class>
+    </component>
+
+    <render-kit>
+        <renderer>
+            <component-family>org.primefaces.component</component-family>
+            <renderer-type>org.primefaces.component.PoseidonMenuRenderer</renderer-type>
+            <renderer-class>org.primefaces.poseidon.component.PoseidonMenuRenderer</renderer-class>
+        </renderer>
+    </render-kit>
+
+    <!-- تسجيل المحول LocalTimeConverter -->
+    <converter>
+        <converter-id>localTimeConverter</converter-id>
+        <converter-class>order.controller.LocalTimeConverter</converter-class>
+
+    </converter>
+</faces-config>

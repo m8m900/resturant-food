@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+
+</h:head>
+<h:body>
+    <h:form id="form" style="direction: rtl;">
+        <p:growl id="msgs" showDetail="true" />
+        <p:inputText
+                id="userId"
+                styleClass="inputText"
+                required="true"
+                requiredMessage="يرجى إدخال اسم المستخدم"
+                value="#{addIdAccount.userId}"
+                placeholder="المستخدم"
+                label="User ID" />
+        <p:message for="userId" />
+        <p:commandButton
+                class="dd"
+                actionListener="#{addIdAccount.init}"
+                action="#{addIdAccount.login1}"
+                process="@form"
+                update="form"
+                value="الذهاب الى الصفحة الرئيسية"
+                icon="pi pi-check" />
+    </h:form>
+
+</h:body>
+
+</html>

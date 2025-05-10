@@ -1,0 +1,53 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/template.xhtml">
+    <h:head>
+    </h:head>
+    <ui:define name="content">
+        <h:form id="form">
+            <h:messages globalOnly="true" />
+            <p:dataTable var="food" dir="rtl" value="#{mealCardController.meal_cardList}" editable="true" id="dataTable" >
+                <p:column headerText=" الصورة">
+                    <p:commandButton icon="pi pi-eye"
+                                     styleClass="ui-button-secondary"
+                                     title="عرض الصورة"
+                                     onclick="PF('imageDialog#{food.id}').show();" />
+
+                    <p:dialog header="الصورة" widgetVar="imageDialog#{food.id}" modal="true" closable="false"   >
+
+                        <p:commandButton icon="pi pi-times"  onclick="PF('imageDialog#{food.id}').hide();" />
+                        <p:graphicImage url="/photo?name=#{food.uploadedFileEntities[0].filePath}"   alt="الصورة" style="width:50%" />
+
+                    </p:dialog>
+                </p:column>
+                <p:column headerText="وقت تقديم الوجبة " sortBy="#{food.serving_meal}" filterBy="#{food.serving_meal}" filterMatchMode="contains" filterPlaceholder="Filter By Name">
+                    <h:outputText value="#{food.serving_meal}" />
+                </p:column>
+                <p:column headerText="المكونات " sortBy="#{food.ingredients}" filterBy="#{food.ingredients}" filterMatchMode="contains" filterPlaceholder="Filter By Name">
+                    <h:outputText value="#{food.ingredients}" />
+                </p:column>
+
+                <p:column headerText="السعر " sortBy="#{food.price}" filterBy="#{food.price}" filterMatchMode="contains" filterPlaceholder="Filter By Name">
+                    <h:outputText value="#{food.price}" />
+                </p:column>
+            <p:column headerText="تفاصي الوجبة" sortBy="#{food.details}" filterBy="#{food.details}" filterMatchMode="contains" filterPlaceholder="Filter By Name">
+                <h:outputText value="#{food.details}" />
+            </p:column>
+                <p:column  style="width:6rem">
+                    <p:commandButton icon="pi pi-trash"
+                                     styleClass="ui-button-danger"
+                                     action="#{mealCardController.deleteMeal_card(food)}"
+                                     update="dataTable"   />
+                </p:column>
+                <p:column  style="width:6rem" >
+                    <p:linkButton icon="pi pi-pencil" outcome="create" process="@this" >
+                        <f:param name="id" value="#{food.id}"/>
+                    </p:linkButton>
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>

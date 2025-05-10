@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/template.xhtml">
+   <ui:define name="content">
+      <h:form>
+          <h:form>
+              <p:panel header="الإحصائيات" styleClass="ui-panel ui-widget">
+                  <h:outputText value="عدد الأفراد الذين حجزوا فطور: #{dashboard.breakfastCount}" />
+                  <br />
+                  <h:outputText value="عدد الأفراد الذين حجزوا غداء: #{dashboard.lunchCount}" />
+                  <br />
+                  <h:outputText value="عدد الأفراد الذين حجزوا عشاء: #{dashboard.dinnerCount}" />
+                  <h:panelGrid columns="2">
+                      <!-- الرسم البياني للفطور -->
+                      <p:chart type="pie"
+                               model="#{dashboard.breakfastCount}"
+                               title="إحصائيات الفطور"
+                               legendPosition="w" />
+
+                      <!-- الرسم البياني للغداء -->
+                      <p:chart type="pie"
+                               model="#{dashboard.lunchCount}"
+                               title="إحصائيات الغداء"
+                               legendPosition="w" />
+
+                      <!-- الرسم البياني للعشاء -->
+                      <p:chart type="pie"
+                               model="#{dashboard.dinnerCount}"
+                               title="إحصائيات العشاء"
+                               legendPosition="w" />
+
+                  </h:panelGrid>
+              </p:panel>
+          </h:form>
+
+      </h:form>
+   </ui:define>
+</ui:composition>

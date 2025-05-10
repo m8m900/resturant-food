@@ -1,0 +1,127 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/template.xhtml">
+    <h:head>
+    </h:head>
+    <ui:define name="content">
+        <h:form dir="RTL" id="form">
+            <p:growl id="messages" showDetail="true" life="3000" />
+            <div class="card">
+                <h3> بطاقة المطبخ </h3>
+                <div class="ui-fluid p-formgrid p-grid ">
+                    <div class="p-field p-col-4 p-md:col-4">
+                        <label for="c1">اسم المطبخ </label>
+                        <p:inputText id="c1" value="#{restaurantCardController.restaurantOfCard.name}">
+                            <p:ajax event="keyup" process="@this" update="@this"/>
+                        </p:inputText>
+                    </div>
+                    <div class="p-field p-col-4 p-md:col-4">
+                        <label for="c2">موقع المطبخ </label>
+                        <p:inputText id="c2" value="#{restaurantCardController.restaurantOfCard.site}">
+                            <p:ajax event="keyup" process="@this" update="@this"/>
+                        </p:inputText>
+                    </div>
+                    <div>
+                        <div class=" p-col-1 p-md:col-3">
+                            <p:commandButton value=" اضافة الوجبات لأيام الاسبوع "
+                                             actionListener="#{restaurantCardController.onOpen}" process="@this"
+                                             update="pn1 messages" style="width: 200px; margin-top: 25px;"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p:outputPanel id="pn1">
+                <h:panelGroup rendered="#{restaurantCardController.openDiv}">
+                    <div class="card">
+                        <div>
+                            <h3> الفطور </h3>
+                        </div>
+                        <div class="ui-fluid p-formgrid p-grid  ">
+                            <ui:repeat value="#{restaurantCardController.breakfast}" var="breakfast">
+                                <div class="p-field p-col-3 p-md:col-2">
+                                    <p:outputLabel for="breakfast" value="#{restaurantCardController.getLocalizedDay(breakfast.date.dayOfWeek)}"/>
+
+
+                                    <p:selectOneMenu id="breakfast" multiple="false"
+                                                     emptyLabel="Please select..."
+                                                     updateLabel="true"
+                                                     converter="omnifaces.SelectItemsConverter"
+                                                     value="#{breakfast.mealOfCard}">
+
+                                        <f:selectItem itemLabel="اختر الوجبة" itemValue="#{null}"
+                                                      noSelectionOption="true"/>
+                                        <f:selectItems var="item"
+                                                       itemValue="#{item}"
+                                                       itemLabel="#{item.ingredients}"
+                                                       value="#{mealCardController.filterMealsByType('الفطور')}"/>
+                                    </p:selectOneMenu>
+                                </div>
+                            </ui:repeat>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <h3> الغداء </h3>
+                        </div>
+                        <div class="ui-fluid p-formgrid p-grid  ">
+                            <ui:repeat value="#{restaurantCardController.lunch}" var="lunch">
+                                <div class="p-field p-col-3 p-md:col-2">
+                                    <p:outputLabel for="lunch" value="#{restaurantCardController.getLocalizedDay(lunch.date.dayOfWeek)}"/>
+
+
+                                    <p:selectOneMenu id="lunch" multiple="false"
+                                                     emptyLabel="Please select..."
+                                                     updateLabel="true"
+                                                     converter="omnifaces.SelectItemsConverter"
+                                                     value="#{lunch.mealOfCard}">
+                                        <f:selectItem itemLabel="اختر الوجبة" itemValue="#{null}"
+                                                      noSelectionOption="true"/>
+                                        <f:selectItems var="item"
+                                                       itemValue="#{item}"
+                                                       itemLabel="#{item.ingredients}"
+                                                       value="#{mealCardController.filterMealsByType('الغداء')}"/>
+                                    </p:selectOneMenu>
+                                </div>
+                            </ui:repeat>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3> العشاء </h3>
+                        </div>
+                        <div class="p-grid ui-fluid ">
+                            <ui:repeat value="#{restaurantCardController.dinner}" var="dinner">
+                                <div class="p-field p-col-3 p-md:col-2">
+                                    <p:outputLabel for="dinner" value="#{restaurantCardController.getLocalizedDay(dinner.date.dayOfWeek)}"/>
+
+                                    <p:selectOneMenu id="dinner" multiple="false"
+                                                     emptyLabel="Please select..."
+                                                     updateLabel="true"
+                                                     converter="omnifaces.SelectItemsConverter"
+                                                     value="#{dinner.mealOfCard}">
+                                        <f:selectItem itemLabel="اختر الوجبة" itemValue="#{null}"
+                                                      noSelectionOption="true"/>
+                                        <f:selectItems var="item"
+                                                       itemValue="#{item}"
+                                                       itemLabel="#{item.ingredients}"
+                                                       value="#{mealCardController.filterMealsByType('العشاء')}"/>
+                                    </p:selectOneMenu>
+                                </div>
+                            </ui:repeat>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="p-col-1 p-md:col-3">
+                            <p:commandButton value="حفظ" actionListener="#{restaurantCardController.saveInDB}"
+                                             process="@form" update="form" style="width: 200px; margin-top: 25px;"/>
+                        </div>
+                    </div>
+                </h:panelGroup>
+            </p:outputPanel>
+        </h:form>
+    </ui:define>
+</ui:composition>
