@@ -12,7 +12,6 @@ import order.entity.Reservation;
 import order.entity.ReservationSettings;
 import order.service.ReservationFacade;
 import order.service.ReservationSettingsFacade;
-import org.primefaces.PrimeFaces;
 import org.primefaces.event.SelectEvent;
 import org.primefaces.model.DefaultScheduleEvent;
 import org.primefaces.model.DefaultScheduleModel;
@@ -31,20 +30,27 @@ import java.util.List;
 @Named
 @ViewScoped
 public class ReservationBean implements Serializable {
+
     private ScheduleModel eventModel;
+
+    // لإضافة الحجز
     private LocalDateTime startDate;
     private LocalDateTime endDate;
-    private String selectedMeal;
-    private List<String> mealOptions;
+    private String addSelectedMeal;
+
+    // لتعديل الحجز
     private Reservation reservation;
+    private LocalDate editDate;
+    private String editSelectedMeal;
+
+    // إعدادات عامة
+    private List<String> mealOptions;
     private String serverTimeZone;
     private Date minDate;
-    private Date firstDayOfMonth;
-    private Date lastDayOfMonth;
-    private LocalDate editDate; // تاريخ الحجز المعدل
 
     @Inject
     private ReservationFacade reservationFacade;
+
     @Inject
     private ReservationSettingsFacade settingsFacade;
 
@@ -54,18 +60,12 @@ public class ReservationBean implements Serializable {
         mealOptions = Arrays.asList("إفطار", "غداء", "عشاء");
         serverTimeZone = java.time.ZoneId.systemDefault().getId();
         minDate = new Date();
-
-        // أول وآخر يوم من الشهر الحالي
-        LocalDate today = LocalDate.now();
-        firstDayOfMonth = java.sql.Date.valueOf(today.withDayOfMonth(1));
-        lastDayOfMonth = java.sql.Date.valueOf(today.withDayOfMonth(today.lengthOfMonth()));
-
         loadReservations();
     }
 
     public void loadReservations() {
-        List<Reservation> reservations = reservationFacade.getAllReservations();
         eventModel.clear();
+        List<Reservation> reservations = reservationFacade.getAllReservations();
         for (Reservation res : reservations) {
             ScheduleEvent<?> event = DefaultScheduleEvent.builder()
                     .title(res.getOrderType())
@@ -79,29 +79,31 @@ public class ReservationBean implements Serializable {
     }
 
     public void addReservation() {
-        reservation = null;
-        long daysBetween = java.time.temporal.ChronoUnit.DAYS.between(startDate.toLocalDate(), endDate.toLocalDate()) + 1;
+        if (startDate == null || endDate == null || addSelectedMeal == null) {
+            showMessage(FacesMessage.SEVERITY_WARN, "تحذير", "يرجى ملء كل الحقول المطلوبة");
+            return;
+        }
 
         ReservationSettings settings = settingsFacade.getSettings();
         if (settings == null) {
-            FacesContext.getCurrentInstance().addMessage(null,
-                    new FacesMessage(FacesMessage.SEVERITY_WARN, "تنبيه", "لم يتم ضبط إعدادات الحجز بعد!"));
+            showMessage(FacesMessage.SEVERITY_WARN, "تنبيه", "لم يتم ضبط إعدادات الحجز بعد!");
             return;
         }
+
+        long daysBetween = java.time.temporal.ChronoUnit.DAYS.between(startDate.toLocalDate(), endDate.toLocalDate()) + 1;
 
         for (int i = 0; i < daysBetween; i++) {
             LocalDate currentDate = startDate.toLocalDate().plusDays(i);
 
             if (currentDate.getMonthValue() != LocalDate.now().getMonthValue()) {
-                FacesContext.getCurrentInstance().addMessage(null,
-                        new FacesMessage(FacesMessage.SEVERITY_WARN, "تنبيه", "لا يمكنك الحجز خارج الشهر الحالي!"));
+                showMessage(FacesMessage.SEVERITY_WARN, "تنبيه", "لا يمكنك الحجز خارج الشهر الحالي!");
                 continue;
             }
 
             LocalDateTime fixedStart;
             LocalDateTime fixedEnd;
 
-            switch (selectedMeal) {
+            switch (addSelectedMeal) {
                 case "إفطار":
                     fixedStart = LocalDateTime.of(currentDate, settings.getBreakfastStart());
                     fixedEnd = LocalDateTime.of(currentDate, settings.getBreakfastEnd());
@@ -115,108 +117,99 @@ public class ReservationBean implements Serializable {
                     fixedEnd = LocalDateTime.of(currentDate, settings.getDinnerEnd());
                     break;
                 default:
-                    FacesContext.getCurrentInstance().addMessage(null,
-                            new FacesMessage(FacesMessage.SEVERITY_WARN, "تنبيه", "يرجى اختيار نوع وجبة صالح!"));
+                    showMessage(FacesMessage.SEVERITY_WARN, "تنبيه", "يرجى اختيار نوع وجبة صالح!");
                     continue;
             }
 
             if (currentDate.equals(LocalDate.now()) && LocalDateTime.now().isAfter(fixedStart)) {
-                FacesContext.getCurrentInstance().addMessage(null,
-                        new FacesMessage(FacesMessage.SEVERITY_WARN, "تنبيه", "لا يمكنك حجز " + selectedMeal + " لهذا اليوم لأن الوقت المحدد قد مر"));
+                showMessage(FacesMessage.SEVERITY_WARN, "تنبيه", "لا يمكنك حجز " + addSelectedMeal + " لهذا اليوم لأن الوقت المحدد قد مر");
                 continue;
             }
 
             Reservation res = new Reservation();
+            res.setOrderType(addSelectedMeal);
             res.setReservationTime(fixedStart);
             res.setEndTime(fixedEnd);
-            res.setOrderType(selectedMeal);
-            reservationFacade.create(res);
+
+            try {
+                reservationFacade.create(res);
+            } catch (Exception e) {
+                showMessage(FacesMessage.SEVERITY_ERROR, "خطأ", "فشل إضافة الحجز: " + e.getMessage());
+                return;
+            }
         }
 
         loadReservations();
-        FacesContext.getCurrentInstance().addMessage(null,
-                new FacesMessage("تمت إضافة الحجز بنجاح"));
-
-        selectedMeal = null;
-        startDate = null;
-        endDate = null;
-    }
-
-    public void onDateSelect(SelectEvent<LocalDateTime> event) {
-        LocalDate selectedDate = event.getObject().toLocalDate();
-        LocalDate today = LocalDate.now();
-
-        if (selectedDate.isBefore(today) || selectedDate.getMonthValue() != today.getMonthValue()) {
-            FacesContext.getCurrentInstance().addMessage(null,
-                    new FacesMessage(FacesMessage.SEVERITY_WARN, "تحذير", "لا يمكنك الحجز خارج الشهر الحالي!"));
-            return;
-        }
-
-        this.startDate = selectedDate.atStartOfDay();
-        this.endDate = selectedDate.atStartOfDay();
-        PrimeFaces.current().executeScript("PF('eventDialog').show();");
-    }
-
-    public void onEventSelect(SelectEvent<ScheduleEvent<?>> event) {
-        ScheduleEvent<?> scheduleEvent = event.getObject();
-        if (scheduleEvent.getData() instanceof Reservation) {
-            this.reservation = (Reservation) scheduleEvent.getData();
-            this.selectedMeal = reservation.getOrderType();
-            this.editDate = reservation.getReservationTime().toLocalDate(); // حفظ التاريخ المعدل
-            PrimeFaces.current().executeScript("PF('editDialog').show();");
-        }
+        resetFields();
+        showMessage(FacesMessage.SEVERITY_INFO, "نجاح", "تمت إضافة الحجز بنجاح");
     }
 
     public void updateReservation() {
-        if (reservation != null && editDate != null) {
-            reservation.setOrderType(selectedMeal);
+        if (reservation == null || editDate == null || editSelectedMeal == null) return;
 
-            ReservationSettings settings = settingsFacade.getSettings();
-            LocalDateTime fixedStart, fixedEnd;
+        ReservationSettings settings = settingsFacade.getSettings();
+        LocalDateTime fixedStart;
+        LocalDateTime fixedEnd;
 
-            // تعديل وقت الحجز بناءً على الوجبة والتاريخ المعدل
-            switch (selectedMeal) {
-                case "إفطار":
-                    fixedStart = LocalDateTime.of(editDate, settings.getBreakfastStart());
-                    fixedEnd = LocalDateTime.of(editDate, settings.getBreakfastEnd());
-                    break;
-                case "غداء":
-                    fixedStart = LocalDateTime.of(editDate, settings.getLunchStart());
-                    fixedEnd = LocalDateTime.of(editDate, settings.getLunchEnd());
-                    break;
-                case "عشاء":
-                    fixedStart = LocalDateTime.of(editDate, settings.getDinnerStart());
-                    fixedEnd = LocalDateTime.of(editDate, settings.getDinnerEnd());
-                    break;
-                default:
-                    FacesContext.getCurrentInstance().addMessage(null,
-                            new FacesMessage(FacesMessage.SEVERITY_ERROR, "خطأ", "نوع وجبة غير معروف"));
-                    return;
-            }
-
-            reservation.setReservationTime(fixedStart);
-            reservation.setEndTime(fixedEnd);
-
-            reservationFacade.create(reservation);
-            reservation = null;
-            selectedMeal = null;
-            editDate = null;
-
-            loadReservations();
-            FacesContext.getCurrentInstance().addMessage(null,
-                    new FacesMessage("تم تعديل الحجز بنجاح"));
+        switch (editSelectedMeal) {
+            case "إفطار":
+                fixedStart = LocalDateTime.of(editDate, settings.getBreakfastStart());
+                fixedEnd = LocalDateTime.of(editDate, settings.getBreakfastEnd());
+                break;
+            case "غداء":
+                fixedStart = LocalDateTime.of(editDate, settings.getLunchStart());
+                fixedEnd = LocalDateTime.of(editDate, settings.getLunchEnd());
+                break;
+            case "عشاء":
+                fixedStart = LocalDateTime.of(editDate, settings.getDinnerStart());
+                fixedEnd = LocalDateTime.of(editDate, settings.getDinnerEnd());
+                break;
+            default:
+                showMessage(FacesMessage.SEVERITY_ERROR, "خطأ", "نوع وجبة غير معروف");
+                return;
         }
+
+        reservation.setOrderType(editSelectedMeal);
+        reservation.setReservationTime(fixedStart);
+        reservation.setEndTime(fixedEnd);
+
+        reservationFacade.create(reservation);
+
+        loadReservations();
+        resetFields();
+        showMessage(FacesMessage.SEVERITY_INFO, "تم", "تم تعديل الحجز بنجاح");
     }
 
     public void deleteReservation() {
         if (reservation != null) {
             reservationFacade.remove(reservation);
-            reservation = null;
-            selectedMeal = null;
             loadReservations();
-            FacesContext.getCurrentInstance().addMessage(null,
-                    new FacesMessage("تم حذف الحجز"));
+            resetFields();
+            showMessage(FacesMessage.SEVERITY_INFO, "تم", "تم حذف الحجز");
         }
+    }
+
+    public void onEventSelect(SelectEvent<ScheduleEvent<?>> event) {
+        ScheduleEvent<?> scheduleEvent = event.getObject();
+
+        if (scheduleEvent.getData() instanceof Reservation) {
+            this.reservation = (Reservation) scheduleEvent.getData();
+            this.editSelectedMeal = reservation.getOrderType();
+            this.editDate = reservation.getReservationTime().toLocalDate();
+        }
+    }
+
+    private void showMessage(FacesMessage.Severity severity, String title, String detail) {
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(severity, title, detail));
+    }
+
+    private void resetFields() {
+        this.reservation = null;
+        this.addSelectedMeal = null;
+        this.editSelectedMeal = null;
+        this.startDate = null;
+        this.endDate = null;
+        this.editDate = null;
     }
 
     private String getEventStyleClass(String orderType) {

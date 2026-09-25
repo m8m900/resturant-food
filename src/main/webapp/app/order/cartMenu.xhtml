@@ -1,0 +1,140 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="content">
+
+        <style>
+            .breakfast-event {
+                background-color: blue !important;
+                border-color: blue !important;
+                border-style: solid !important;
+            }
+
+            .lunch-event {
+                background-color: red !important;
+                border-color: red !important;
+                border-style: solid !important;
+            }
+
+            .dinner-event {
+                background-color: green !important;
+                border-color: green !important;
+                border-style: solid !important;
+            }
+        </style>
+
+        <h:form id="reservationForm">
+
+            <p:growl id="messages" showDetail="true" autoUpdate="true"/>
+
+            <!-- زر فتح نافذة الحجز -->
+            <div class="p-mb-3">
+                <p:commandButton value="إضافة حجز وجبة"
+                                 icon="pi pi-plus"
+                                 onclick="PF('eventDialog').show();"
+                                 process="@this"
+                                 update="eventDetails"
+                                 styleClass="ui-button-success p-mr-2"/>
+            </div>
+
+            <!-- الجدول الزمني -->
+            <p:schedule id="schedule" widgetVar="myschedule"
+                        value="#{reservationBean.eventModel}"
+                        timeZone="#{reservationBean.serverTimeZone}"
+                        clientTimeZone="#{reservationBean.serverTimeZone}"
+                        allDaySlot="false"
+                        eventContent="title"
+                        eventRender="function(event, element) {
+                            element.addClass(event.styleClass);
+                        }">
+                <p:ajax event="eventSelect"
+                        listener="#{reservationBean.onEventSelect}"
+                        update=":reservationForm:editDetails"
+                        oncomplete="PF('editDialog').show();"/>
+            </p:schedule>
+
+            <!-- نافذة إضافة الحجز -->
+            <p:dialog header="إضافة حجز وجبة"
+                      widgetVar="eventDialog"
+                      modal="true"
+                      resizable="false"
+                      closable="true">
+
+                <h:panelGrid id="eventDetails" columns="2" cellpadding="5">
+
+                    <p:outputLabel for="mealType" value="نوع الوجبة"/>
+                    <p:selectOneMenu id="mealType" value="#{reservationBean.addSelectedMeal}" required="true"
+                                     requiredMessage="يرجى اختيار نوع الوجبة">
+                        <f:selectItem itemValue="" itemLabel="-- اختر --"/>
+                        <f:selectItems value="#{reservationBean.mealOptions}"/>
+                    </p:selectOneMenu>
+
+                    <p:outputLabel for="from" value="من"/>
+                    <p:datePicker id="from" value="#{reservationBean.startDate}"
+                                  required="true"
+                                  requiredMessage="يرجى اختيار تاريخ البداية"
+                                  mindate="#{reservationBean.minDate}" showTime="false"/>
+
+                    <p:outputLabel for="to" value="إلى"/>
+                    <p:datePicker id="to" value="#{reservationBean.endDate}"
+                                  pattern="yyyy-MM-dd" required="true"
+                                  requiredMessage="يرجى اختيار تاريخ النهاية"
+                                  mindate="#{reservationBean.minDate}" showTime="false"/>
+                </h:panelGrid>
+
+                <p:commandButton value="حفظ"
+                                 action="#{reservationBean.addReservation}"
+                                 process="reservationForm"
+                                 update="schedule messages"
+                                 oncomplete="PF('eventDialog').hide();"/>
+            </p:dialog>
+
+            <!-- نافذة تعديل/حذف الحجز -->
+            <p:dialog id="editDialog" header="تعديل أو حذف الحجز"
+                      widgetVar="editDialog"
+                      modal="true"
+                      resizable="false"
+                      closable="true">
+
+                <h:panelGrid id="editDetails" columns="2" cellpadding="5">
+
+                    <p:outputLabel for="editMealType" value="نوع الوجبة"/>
+                    <p:selectOneMenu id="editMealType" value="#{reservationBean.editSelectedMeal}" required="true"
+                                     requiredMessage="يرجى اختيار نوع الوجبة">
+                        <f:selectItem itemValue="" itemLabel="-- اختر --"/>
+                        <f:selectItems value="#{reservationBean.mealOptions}"/>
+                    </p:selectOneMenu>
+
+                    <p:outputLabel for="editDate" value="تاريخ الحجز"/>
+                    <p:datePicker id="editDate" value="#{reservationBean.editDate}"
+                                  pattern="yyyy-MM-dd" required="true"
+                                  requiredMessage="يرجى اختيار تاريخ"
+                                  mindate="#{reservationBean.minDate}"/>
+                </h:panelGrid>
+
+                <p:separator/>
+
+                <p:commandButton value="تعديل"
+                                 action="#{reservationBean.updateReservation}"
+                                 process="reservationForm"
+                                 update="schedule messages"
+                                 oncomplete="PF('editDialog').hide();"
+                                 icon="pi pi-check"
+                                 styleClass="ui-button-success p-mr-2"/>
+
+                <p:commandButton value="حذف"
+                                 action="#{reservationBean.deleteReservation}"
+                                 process="reservationForm"
+                                 update="schedule messages"
+                                 oncomplete="PF('editDialog').hide();"
+                                 icon="pi pi-trash"
+                                 styleClass="ui-button-danger"/>
+            </p:dialog>
+
+        </h:form>
+    </ui:define>
+</ui:composition>

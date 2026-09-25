@@ -9,511 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8cf5583-b851-438e-95ef-19ade5950b4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AbstractFacade/AbstractFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cutMeal/entity/MealCut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dashboards/dashboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/day/entity/DaysOfWeeks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/day/service/DaysOfWeeksService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/logIn/AccountAuto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/logIn/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/logIn/entity/UserPeopleEmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/logIn/service/LogInFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/meal/controller/MealCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/meal/entity/MealOfCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/meal/entity/UploadedFileEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/meal/service/FileUploadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/meal/service/MealCardFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/meal/service/Photo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/order/controller/ReservationBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/order/controller/ReservationSettingsBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/order/entity/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/order/entity/ReservationSettings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/order/service/ReservationFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/order/service/ReservationSettingsFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/component/PoseidonMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/component/PoseidonMenuRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/domain/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/domain/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/domain/CustomerStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/domain/Document.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/domain/InventoryStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/domain/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/domain/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/domain/Photo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/domain/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/domain/Representative.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/filter/CharacterEncodingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/service/DocumentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/service/PhotoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/CalendarDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/ChartDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/ChronolineView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/CrudDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/DashboardView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/DataTableDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/FileDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/FormDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/GridDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/GuestPreferences.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/InvoiceDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/ListDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/MediaDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/MessageDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/OverlayDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/PrimeIconsView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/primefaces/poseidon/view/TreeDemoView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/peopleAccount/controller/AddIdAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/peopleAccount/entity/UserEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/peopleAccount/service/UserEntryFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantCard/controller/RestaurantCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantCard/entity/RestaurantOfCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restaurantCard/service/RestaurantCardFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/breadcrumb.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/config.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/footer.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/menu.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/primefaces-poseidon.taglib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/rightpanel.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/template.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/topbar.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/cardOfRestaurant/cooker.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/cardOfRestaurant/table_cooker.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/card_meal/cardOfMeal.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/card_meal/create.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/card_meal/table_CardOfMeal.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/cuttingMeal/cuttingMeal.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/dashboard/dashboard.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/login/login.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/order/sitings.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/userAcount/addUserId.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/userAcount/userAcount.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/_demo_common.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/_rightpanel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/_topbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/demo-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/demo-dark.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/demo-dim.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/demo-dim.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/demo-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/demo-light.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/flags/flags.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/flags/flags_responsive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_chronoline.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_common.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_crud.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_dashboard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_documentation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_elevation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_flexbox.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_floatlabel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_messages.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_misc.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_spacing.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_syntax.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/css/pages/_table.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/avatar/amyelsner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/avatar/annafali.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/avatar/asiyajavayant.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/avatar/bernardodominic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/avatar/elwinsharvill.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/avatar/ionibowcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/avatar/ivanmagalhaes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/avatar/onyamalimba.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/avatar/profile.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/avatar/stephenshaw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/avatar/xuxuefeng.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/asset-deals.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/asset-deals.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/asset-graph-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/asset-graph-3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/asset-graph.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/avatar-conan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/avatar-conan@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/avatar-conan@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/avatar-dengra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/avatar-dengra@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/avatar-dengra@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/image-product-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/image-product-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/image-product-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/image-product-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/image-product-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/leader-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/leader-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/leader-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/leader-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/seller-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/seller-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/seller-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/dashboard/seller-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria10s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria11s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria12s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria13s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria14s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria15s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria1s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria2s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria3s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria4s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria5s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria6s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria7s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria8s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/galleria/galleria9s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/nature/nature9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/bamboo-watch.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/black-watch.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/blue-band.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/blue-t-shirt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/bracelet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/brown-purse.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/chakra-bracelet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/galaxy-earrings.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/game-controller.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/gaming-set.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/gold-phone-case.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/green-earbuds.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/green-t-shirt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/grey-t-shirt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/headphones.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/light-green-t-shirt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/lime-band.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/mini-speakers.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/painted-phone-case.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/pink-band.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/pink-purse.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/purple-band.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/purple-gemstone-necklace.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/purple-t-shirt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/shoes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/sneakers.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/teal-t-shirt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/yellow-earbuds.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/yoga-mat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/images/product/yoga-set.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/demo/js/chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/css/layout-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/css/layout-dark.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/css/layout-dim.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/css/layout-dim.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/css/layout-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/css/layout-light.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/css/primeflex.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/css/primeicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-300.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-300.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-300.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-300.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-300.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-600.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-600.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-600.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-600.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-600.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-700.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-700.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-700.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-700.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-700.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/fonts/open-sans-v18-latin-ext_latin-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/icons/primeicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/icons/primeicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/icons/primeicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/icons/primeicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/avatar-profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/avatar1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/avatar2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/avatar3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/avatar4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/icon-404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/icon-access.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/icon-error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/landing/asset-hero-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/landing/asset-hero.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/landing/code.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/landing/darkMode.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/landing/design.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/landing/documented.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/landing/features.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/landing/hero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/landing/hero.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/landing/responsive.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/logo-poseidon-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/logo-poseidon-dark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/logo-poseidon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/pages/asset-cover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/pages/asset-maps.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/pages/asset-news.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/pages/avatar-chat-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/pages/avatar-chat-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/pages/avatar-profil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/pages/bg-help.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/pages/help/blog1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/pages/help/blog2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/images/pages/help/blog3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/js/layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/poseidon-layout/js/prism.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amber-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amber-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amber-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amber-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amber-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amber-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amethyst-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amethyst-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amethyst-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amethyst-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amethyst-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-amethyst-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-apple-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-apple-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-apple-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-apple-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-apple-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-apple-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-camelot-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-camelot-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-camelot-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-camelot-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-camelot-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-camelot-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cape-palliser-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cape-palliser-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cape-palliser-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cape-palliser-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cape-palliser-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cape-palliser-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cyan-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cyan-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cyan-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cyan-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cyan-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-cyan-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-denim-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-denim-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-denim-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-denim-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-denim-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-denim-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-gigas-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-gigas-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-gigas-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-gigas-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-gigas-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-gigas-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-jungle-green-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-jungle-green-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-jungle-green-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-jungle-green-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-jungle-green-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-jungle-green-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-sea-green-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-sea-green-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-sea-green-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-sea-green-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-sea-green-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-sea-green-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-tapestry-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-tapestry-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-tapestry-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-tapestry-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-tapestry-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-tapestry-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-wedgewood-dark/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-wedgewood-dark/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-wedgewood-dim/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-wedgewood-dim/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-wedgewood-light/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/primefaces-poseidon-wedgewood-light/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/_fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_animation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_breadcrumb.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_config.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_exception.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_help.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_invoice.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_landing.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_layout.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_login.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_rightpanel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_rtl.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_typography.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_utils.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/_widgets.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/menu/_menu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/menu/_menu_horizontal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/menu/_menu_overlay.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/menu/_menu_theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/menu/themes/_menu_dark.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/menu/themes/_menu_dim.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/menu/themes/_menu_light.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/topbar/_topbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/topbar/_topbar_common.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/topbar/_topbar_theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/topbar/themes/_topbar_dark.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/topbar/themes/_topbar_dim.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/layout/topbar/themes/_topbar_light.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/mixins/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/overrides/_layout_styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/overrides/_layout_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/overrides/_theme_styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/overrides/_theme_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/_theme_dark.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/_theme_dim.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/_theme_light.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/_common.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/_theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/button/_button.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/button/_speeddial.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/button/_splitbutton.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_carousel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_chronoline.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_datagrid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_datalist.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_datascroller.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_datatable.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_dataview.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_fullcalendar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_orderlist.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_paginator.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_picklist.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_tagcloud.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_timeline.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_tree.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/data/_treetable.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/file/_fileupload.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_autocomplete.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_cascadeselect.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_checkbox.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_chips.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_colorpicker.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_datepicker.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_inplace.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_input.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_inputgroup.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_inputswitch.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_keypad.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_multiselectlistbox.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_password.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_radiobutton.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_rating.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_selectbooleancheckbox.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_selectcheckboxmenu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_selectonelistbox.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_selectonemenu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_slider.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_spinner.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/input/_toggleswitch.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/menu/_breadcrumb.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/menu/_menu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/menu/_panelmenu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/menu/_steps.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/menu/_tabmenu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/messages/_growl.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/messages/_message.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/messages/_messages.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/misc/_avatar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/misc/_badge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/misc/_chip.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/misc/_clock.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/misc/_galleria.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/misc/_log.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/misc/_progressbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/misc/_scrolltop.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/misc/_skeleton.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/misc/_tag.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/misc/_terminal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/overlay/_confirmpopup.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/overlay/_dialog.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/overlay/_lightbox.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/overlay/_overlaypanel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/overlay/_sidebar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/overlay/_tooltip.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_accordion.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_dashboard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_divider.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_fieldset.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_notificationbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_panel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_panelgrid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_scrollpanel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_splitter.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_tabs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_toolbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/theme/designer/components/panel/_wizard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/variables/layout/_layout_common.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/variables/layout/_layout_dark.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/variables/layout/_layout_dim.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/variables/layout/_layout_light.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/variables/theme/_theme_dark.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/variables/theme/_theme_dim.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/sass/variables/theme/_theme_light.scss" afterDir="false" />
+    <list default="true" id="c8cf5583-b851-438e-95ef-19ade5950b4e" name="Changes" comment="تكملة الحجز الوجبات">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/order/controller/ReservationBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/order/controller/ReservationBean.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -548,6 +48,10 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -555,43 +59,63 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2rO62qQuhtcjzdSGI95Xfng1tNG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JBoss/WildFly Server.JBoss/WildFly 31.0.0.Final.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.calendarDate.xhtml.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.FoodReservationSystem [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.FoodReservationSystem [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.FoodReservationSystem [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/msii/IdeaProjects/FoodReservationSystem/src/main/java/cutMeal/entity&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.09208103&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JBoss/WildFly Server.JBoss/WildFly 31.0.0.Final.executor": "Run",
+    "JavaScript Debug.calendarDate.xhtml.executor": "Run",
+    "Maven.FoodReservationSystem [clean].executor": "Run",
+    "Maven.FoodReservationSystem [install].executor": "Run",
+    "Maven.FoodReservationSystem [package].executor": "Run",
+    "RunOnceActivity.ChatTagsLlmMigration": "true",
+    "RunOnceActivity.ClientConfigCleanupMigration": "true",
+    "RunOnceActivity.CodyAccountHistoryMigration": "true",
+    "RunOnceActivity.CodyAccountsIdsRefresh": "true",
+    "RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount": "true",
+    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
+    "RunOnceActivity.CodyHistoryLlmMigration": "true",
+    "RunOnceActivity.CodyMigrateChatHistory-v2": "true",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.DeprecatedChatLlmMigration": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.codeium.enabled": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/msii/Desktop/FoodReservationSystem",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2091954",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "service.view.auto.scroll.to.source": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.primefaces.poseidon.view" />
@@ -611,7 +135,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="JBoss/WildFly 31.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 31.0.0.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="JBoss/WildFly 34.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 34.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -622,16 +146,16 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="SERVER" />
         <option name="BINDING_SET_NAME" value="" />
+        <option name="SERVER" />
         <option name="DOMAIN" value="false" />
         <option name="SERVER_GROUP" value="main-server-group" />
-        <option name="USERNAME" value="" />
-        <option name="CREDENTIAL_ALIAS" />
+        <option name="USERNAME" value="jwd" />
+        <option name="CREDENTIAL_ALIAS" value="85060a73-5cd7-419e-a4cf-f3a91f09b88b" />
       </server-settings>
       <predefined_log_file enabled="true" id="JBoss" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="62951" />
+        <option name="DEBUG_PORT" value="57282" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -689,8 +213,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
       </set>
     </attachedChunks>
   </component>
@@ -766,11 +290,38 @@
       <workItem from="1746822937836" duration="89000" />
       <workItem from="1746823040016" duration="42000" />
       <workItem from="1746823103771" duration="3426000" />
+      <workItem from="1746955120219" duration="7930000" />
+      <workItem from="1747556618779" duration="3261000" />
+      <workItem from="1747572598800" duration="74000" />
+      <workItem from="1748767230793" duration="40000" />
+      <workItem from="1753878288469" duration="6597000" />
+      <workItem from="1754207163685" duration="1105000" />
+      <workItem from="1768175799686" duration="1005000" />
+      <workItem from="1768177207202" duration="176000" />
+      <workItem from="1768177443870" duration="5000" />
+      <workItem from="1768180674371" duration="551000" />
+      <workItem from="1768219786015" duration="26000" />
+      <workItem from="1788388397281" duration="56000" />
+      <workItem from="1788523458009" duration="31000" />
+      <workItem from="1790311542734" duration="266000" />
     </task>
+    <task id="LOCAL-00001" summary="تكملة الحجز الوجبات">
+      <option name="closed" value="true" />
+      <created>1746885464469</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746885464470</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="تكملة الحجز الوجبات" />
+    <option name="LAST_COMMIT_MESSAGE" value="تكملة الحجز الوجبات" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -783,11 +334,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/peopleAccount/controller/AddIdAccount.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -805,5 +351,13 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>
