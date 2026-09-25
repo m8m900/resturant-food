@@ -9,7 +9,7 @@ import jakarta.persistence.PersistenceContext;
 @Stateless
 public class DaysOfWeeksService extends AbstractFacade<DaysOfWeeks> {
 
-    @PersistenceContext(unitName = "default")
+    @PersistenceContext(unitName = "appPU")
     private EntityManager em;
     public DaysOfWeeksService() {
         super(DaysOfWeeks.class);

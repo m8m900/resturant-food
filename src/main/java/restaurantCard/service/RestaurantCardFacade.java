@@ -9,7 +9,7 @@ import restaurantCard.entity.RestaurantOfCard;
 @Stateless
 public class RestaurantCardFacade extends AbstractFacade<RestaurantOfCard> {
 
-    @PersistenceContext(unitName = "default")
+    @PersistenceContext(unitName = "appPU")
     private EntityManager em;
     public RestaurantCardFacade() {
         super(RestaurantOfCard.class);

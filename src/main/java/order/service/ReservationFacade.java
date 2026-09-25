@@ -9,7 +9,7 @@ import java.util.List;
 
 @Stateless
 public class ReservationFacade extends AbstractFacade<Reservation> {
-    @PersistenceContext(unitName = "default")
+    @PersistenceContext(unitName = "appPU")
     private EntityManager em;
 
     public ReservationFacade() {

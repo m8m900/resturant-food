@@ -12,47 +12,21 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>11</maven.compiler.target>
-    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
     <junit.version>5.10.0</junit.version>
   </properties>
 
   <dependencies>
-<dependency>
-      <groupId>jakarta.validation</groupId>
-      <artifactId>jakarta.validation-api</artifactId>
-      <version>3.0.2</version>
+    <!-- Jakarta EE 10 Web Profile - provided by WildFly 31 -->
+    <dependency>
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-web-api</artifactId>
+      <version>10.0.0</version>
       <scope>provided</scope>
-    </dependency><dependency>
-      <groupId>jakarta.ejb</groupId>
-      <artifactId>jakarta.ejb-api</artifactId>
-      <version>4.0.1</version>
-      <scope>provided</scope>
-    </dependency><dependency>
-      <groupId>jakarta.mvc</groupId>
-      <artifactId>jakarta.mvc-api</artifactId>
-      <version>2.1.0</version>
-    </dependency><dependency>
-      <groupId>jakarta.security.enterprise</groupId>
-      <artifactId>jakarta.security.enterprise-api</artifactId>
-      <version>3.0.0</version>
-      <scope>provided</scope>
-    </dependency><dependency>
-      <groupId>jakarta.faces</groupId>
-      <artifactId>jakarta.faces-api</artifactId>
-      <version>4.0.1</version>
-      <scope>provided</scope>
-    </dependency><dependency>
-      <groupId>jakarta.servlet</groupId>
-      <artifactId>jakarta.servlet-api</artifactId>
-      <version>6.0.0</version>
-      <scope>provided</scope>
-    </dependency><dependency>
-      <groupId>jakarta.transaction</groupId>
-      <artifactId>jakarta.transaction-api</artifactId>
-      <version>2.0.1</version>
-      <scope>provided</scope>
-    </dependency><dependency>
+    </dependency>
+
+    <dependency>
       <groupId>org.hibernate.orm</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>6.3.1.Final</version>
@@ -62,78 +36,52 @@
       <artifactId>jaxb-runtime</artifactId>
       <version>4.0.3</version>
     </dependency>
-<dependency>
+
+    <!-- JSF/PrimeFaces UI - to be removed once pages are migrated to Angular -->
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>primeflex</artifactId>
+      <version>3.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.primefaces</groupId>
+      <artifactId>primefaces</artifactId>
+      <version>11.0.0</version>
+      <classifier>jakarta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>org.omnifaces</groupId>
+      <artifactId>omnifaces</artifactId>
+      <version>4.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.30</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
-      <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>${junit.version}</version>
-        <scope>test</scope>
-      </dependency>
-<!--      <dependency>-->
-<!--          <groupId>com.am</groupId>-->
-<!--          <artifactId>PrimefacesBase</artifactId>-->
-<!--          <version>1.5</version>-->
-<!--      </dependency>-->
-
-
-      <dependency>
-          <groupId>jakarta.faces</groupId>
-          <artifactId>jakarta.faces-api</artifactId>
-          <version>4.0.0</version> <!-- إصدار متوافق مع Jakarta EE 10 -->
-          <scope>provided</scope>
-      </dependency>
-      <dependency>
-          <groupId>jakarta.platform</groupId>
-          <artifactId>jakarta.jakartaee-api</artifactId>
-          <version>10.0.0</version>
-      </dependency>
-      <dependency>
-          <groupId>org.webjars.npm</groupId>
-          <artifactId>primeflex</artifactId>
-          <version>3.3.1</version>
-      </dependency>
-      <dependency>
-          <groupId>org.primefaces</groupId>
-          <artifactId>primefaces</artifactId>
-          <version>11.0.0</version>
-          <classifier>jakarta</classifier>
-      </dependency>
-      <dependency>
-          <groupId>org.projectlombok</groupId>
-          <artifactId>lombok</artifactId>
-          <version>1.18.30</version>
-      </dependency>
-      <dependency>
-          <groupId>org.omnifaces</groupId>
-          <artifactId>omnifaces</artifactId>
-          <version>4.3</version>
-      </dependency>
-      <dependency>
-          <groupId>jakarta.platform</groupId>
-          <artifactId>jakarta.jakartaee-api</artifactId>
-          <version>10.0.0</version>
-          <scope>provided</scope>
-      </dependency>
-      <dependency>
-          <groupId>org.junit.jupiter</groupId>
-          <artifactId>junit-jupiter-api</artifactId>
-          <version>${junit.version}</version>
-          <scope>test</scope>
-      </dependency>
-
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
     <plugins>
-<plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.0</version>
-      </plugin>    </plugins>
+      </plugin>
+    </plugins>
   </build>
 </project>

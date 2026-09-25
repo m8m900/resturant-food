@@ -11,7 +11,7 @@ import java.util.List;
 
 @Stateless
 public class MealCardFacade extends AbstractFacade<MealOfCard> {
-        @PersistenceContext(unitName = "default")
+        @PersistenceContext(unitName = "appPU")
         private  EntityManager em;
 
         public MealCardFacade() {

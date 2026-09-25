@@ -11,7 +11,7 @@ import peopleAccount.entity.UserEntry;
 @Stateless
 public class UserEntryFacade extends AbstractFacade<UserEntry> {
 
-    @PersistenceContext(unitName = "default")
+    @PersistenceContext(unitName = "appPU")
     private EntityManager em;
 
     public UserEntryFacade() {

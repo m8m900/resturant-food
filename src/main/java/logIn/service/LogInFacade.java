@@ -9,7 +9,7 @@ import logIn.entity.UserPeopleEmail;
 
 @Stateless
 public class LogInFacade extends AbstractFacade<UserPeopleEmail> {
-    @PersistenceContext(unitName = "default")
+    @PersistenceContext(unitName = "appPU")
     private EntityManager em;
     public LogInFacade() {
         super(UserPeopleEmail.class);

@@ -10,7 +10,7 @@ import java.util.List;
 
 @Stateless
 public class FileUploadService extends AbstractFacade<UploadedFileEntity> {
-    @PersistenceContext(unitName = "default")
+    @PersistenceContext(unitName = "appPU")
     private EntityManager em;
 
     public FileUploadService() {
