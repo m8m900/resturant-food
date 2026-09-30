@@ -1,22 +1,22 @@
-package day.service;
+package restaurantCard.service;
 
-import AbstractFacade.AbstractFacade;
-import day.entity.DaysOfWeeks;
+import abstractFacade.AbstractFacade;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import restaurantCard.entity.RestaurantOfCard;
 
 @Stateless
-public class DaysOfWeeksService extends AbstractFacade<DaysOfWeeks> {
+public class RestaurantCardFacade extends AbstractFacade<RestaurantOfCard> {
 
     @PersistenceContext(unitName = "appPU")
     private EntityManager em;
-    public DaysOfWeeksService() {
-        super(DaysOfWeeks.class);
+    public RestaurantCardFacade() {
+        super(RestaurantOfCard.class);
     }
     @Override
     protected EntityManager getEntityManager() {
         return this.em;
-    }}
+    }
 
-
+}

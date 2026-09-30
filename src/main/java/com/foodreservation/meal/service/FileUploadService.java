@@ -1,18 +1,21 @@
-package restaurantCard.service;
+package meal.service;
 
-import AbstractFacade.AbstractFacade;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import restaurantCard.entity.RestaurantOfCard;
+import meal.entity.UploadedFileEntity;
+
+import java.util.List;
+
+import abstractFacade.AbstractFacade;
 
 @Stateless
-public class RestaurantCardFacade extends AbstractFacade<RestaurantOfCard> {
-
+public class FileUploadService extends AbstractFacade<UploadedFileEntity> {
     @PersistenceContext(unitName = "appPU")
     private EntityManager em;
-    public RestaurantCardFacade() {
-        super(RestaurantOfCard.class);
+
+    public FileUploadService() {
+        super(UploadedFileEntity.class);
     }
     @Override
     protected EntityManager getEntityManager() {

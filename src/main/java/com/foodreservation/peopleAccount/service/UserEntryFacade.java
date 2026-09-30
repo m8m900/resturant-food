@@ -1,6 +1,6 @@
 package peopleAccount.service;
 
-import AbstractFacade.AbstractFacade;
+import abstractFacade.AbstractFacade;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

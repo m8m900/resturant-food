@@ -1,24 +1,22 @@
-package meal.service;
+package day.service;
 
-import AbstractFacade.AbstractFacade;
+import abstractFacade.AbstractFacade;
+import day.entity.DaysOfWeeks;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import meal.entity.UploadedFileEntity;
-
-import java.util.List;
 
 @Stateless
-public class FileUploadService extends AbstractFacade<UploadedFileEntity> {
+public class DaysOfWeeksService extends AbstractFacade<DaysOfWeeks> {
+
     @PersistenceContext(unitName = "appPU")
     private EntityManager em;
-
-    public FileUploadService() {
-        super(UploadedFileEntity.class);
+    public DaysOfWeeksService() {
+        super(DaysOfWeeks.class);
     }
     @Override
     protected EntityManager getEntityManager() {
         return this.em;
-    }
+    }}
 
-}
+

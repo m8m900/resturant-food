@@ -1,6 +1,5 @@
 package meal.service;
 
-import AbstractFacade.AbstractFacade;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -8,6 +7,8 @@ import jakarta.transaction.Transactional;
 import meal.entity.MealOfCard;
 
 import java.util.List;
+
+import abstractFacade.AbstractFacade;
 
 @Stateless
 public class MealCardFacade extends AbstractFacade<MealOfCard> {

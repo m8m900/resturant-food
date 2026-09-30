@@ -1,12 +1,13 @@
 package order.service;
 
-import AbstractFacade.AbstractFacade;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import order.entity.ReservationSettings;
 
 import java.util.List;
+
+import abstractFacade.AbstractFacade;
 
 @Stateless
 public class ReservationSettingsFacade extends AbstractFacade<ReservationSettings> {

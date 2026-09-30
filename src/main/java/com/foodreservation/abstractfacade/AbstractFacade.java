@@ -1,4 +1,4 @@
-package AbstractFacade;
+package abstractFacade;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
