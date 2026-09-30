@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarOptions, EventClickArg } from '@fullcalendar/core';
-import timeGridPlugin from '@fullcalendar/timegrid';
+import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
@@ -39,14 +39,15 @@ export class ReservationList {
     { id: 2, orderType: 'غداء', reservationTime: '2026-10-01T13:00', endTime: '2026-10-01T14:00' },
   ];
 
+  // نفس الإعدادات الافتراضية لـ p:schedule بالأصل: لم يُحدَّد view="..." صراحة،
+  // والقيمة الافتراضية لكل من PrimeFaces Schedule و FullCalendar هي "month"
   calendarOptions: CalendarOptions = {
-    plugins: [timeGridPlugin, interactionPlugin],
-    initialView: 'timeGridWeek',
-    allDaySlot: false,
+    plugins: [dayGridPlugin, interactionPlugin],
+    initialView: 'dayGridMonth',
     headerToolbar: {
       start: 'title',
       center: '',
-      end: 'timeGridWeek,timeGridDay today prev,next',
+      end: 'today prev,next',
     },
     events: this.toEvents(this.reservations),
     eventClick: (arg) => this.onEventClick(arg),

@@ -9,12 +9,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-
-import static com.foodreservation.controller.meal.MealCardController.UPLOAD_PATH;
+import java.nio.file.Paths;
 
 //دالة معالجة طلبات GET
 @WebServlet("/photo")
 public class Photo extends HttpServlet {
+    public static final String UPLOAD_PATH = Paths.get(System.getProperty("jboss.home.dir")).getParent() + "/uploadedFiles/";
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws   ServletException, IOException {
         String imageName = req.getParameter("name");

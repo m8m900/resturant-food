@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8cf5583-b851-438e-95ef-19ade5950b4e" name="Changes" comment="تكملة الحجز الوجبات">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c8cf5583-b851-438e-95ef-19ade5950b4e" name="Changes" comment="تكملة الحجز الوجبات" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -328,6 +326,7 @@
       <workItem from="1788523458009" duration="31000" />
       <workItem from="1790311542734" duration="2174000" />
       <workItem from="1790684047192" duration="17000" />
+      <workItem from="1790783478056" duration="69000" />
     </task>
     <task id="LOCAL-00001" summary="تكملة الحجز الوجبات">
       <option name="closed" value="true" />
@@ -353,7 +352,7 @@
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/restaurantCard/service/RestaurantCardFacade.java</url>
           <line>13</line>
-          <properties class="restaurantCard.service.RestaurantCardFacade" method="&lt;init&gt;">
+          <properties class="restaurantCard.service.RestaurantCardFacade">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
