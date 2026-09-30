@@ -1,0 +1,16 @@
+<div class="app-shell" dir="rtl">
+  <header class="topbar">
+    <img src="/images/img_1.png" alt="شعار" class="logo" />
+    <span class="app-title">نظام حجز الوجبات</span>
+  </header>
+
+  <div class="body">
+    <aside class="sidebar">
+      <p-panelmenu [model]="menuItems" [multiple]="true" />
+    </aside>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

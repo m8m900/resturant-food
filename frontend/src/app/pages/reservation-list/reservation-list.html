@@ -1,0 +1,35 @@
+<div dir="rtl">
+  <div class="toolbar">
+    <p-button label="إضافة حجز وجبة" icon="pi pi-plus" severity="success" (onClick)="openAddDialog()" />
+  </div>
+
+  <full-calendar [options]="calendarOptions" />
+
+  <p-dialog header="إضافة حجز وجبة" [(visible)]="addDialogVisible" [modal]="true">
+    <div class="form-grid">
+      <label for="mealType">نوع الوجبة</label>
+      <p-select id="mealType" [options]="mealOptions" [(ngModel)]="addSelectedMeal" placeholder="-- اختر --" />
+
+      <label for="from">من</label>
+      <p-datepicker id="from" [(ngModel)]="startDate" />
+
+      <label for="to">إلى</label>
+      <p-datepicker id="to" [(ngModel)]="endDate" />
+    </div>
+    <p-button label="حفظ" (onClick)="addReservation()" />
+  </p-dialog>
+
+  <p-dialog header="تعديل أو حذف الحجز" [(visible)]="editDialogVisible" [modal]="true">
+    <div class="form-grid">
+      <label for="editMealType">نوع الوجبة</label>
+      <p-select id="editMealType" [options]="mealOptions" [(ngModel)]="editSelectedMeal" placeholder="-- اختر --" />
+
+      <label for="editDate">تاريخ الحجز</label>
+      <p-datepicker id="editDate" [(ngModel)]="editDate" />
+    </div>
+    <div class="dialog-actions">
+      <p-button label="تعديل" icon="pi pi-check" severity="success" (onClick)="updateReservation()" />
+      <p-button label="حذف" icon="pi pi-trash" severity="danger" (onClick)="deleteReservation()" />
+    </div>
+  </p-dialog>
+</div>

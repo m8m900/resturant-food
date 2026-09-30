@@ -1,0 +1,31 @@
+<div class="card" dir="rtl">
+  <h3>بطاقة وجبة الطعام</h3>
+  <div class="fields">
+    <div class="field">
+      <label for="c1">اسم الاكلة</label>
+      <input pInputText id="c1" [(ngModel)]="meal.ingredients" />
+    </div>
+    <div class="field">
+      <label for="c2">السعر</label>
+      <input pInputText id="c2" [(ngModel)]="meal.price" />
+    </div>
+    <div class="field">
+      <label for="mealType">وقت تقديم الوجبة</label>
+      <p-select
+        id="mealType"
+        [options]="mealTypes"
+        [(ngModel)]="meal.servingMeal"
+        placeholder="-- اختر --"
+      />
+    </div>
+    <div class="field">
+      <label for="txt">تفاصيل الوجبة</label>
+      <textarea pTextarea id="txt" [(ngModel)]="meal.details" rows="3"></textarea>
+    </div>
+    <div class="field full-width">
+      <label>رفع الصورة</label>
+      <p-fileupload mode="advanced" [auto]="true" (onUpload)="onUpload()" chooseLabel="رفع الصورة" />
+    </div>
+    <p-button label="حفظ" icon="pi pi-save" (onClick)="saveInDb()" />
+  </div>
+</div>

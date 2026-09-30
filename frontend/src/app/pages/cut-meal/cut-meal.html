@@ -1,0 +1,35 @@
+<div dir="rtl">
+  <h2>وجبات الأسبوع</h2>
+
+  @for (day of days; track day.name) {
+    <div class="day-block">
+      <h3>{{ day.name }}</h3>
+      <p-table [value]="day.meals" dataKey="id">
+        <ng-template #header>
+          <tr>
+            <th>نوع الوجبة</th>
+            <th>الحالة</th>
+            <th>الإجراء</th>
+          </tr>
+        </ng-template>
+        <ng-template #body let-meal>
+          <tr>
+            <td>{{ meal.type }}</td>
+            <td>{{ meal.cut ? 'مقطوعة' : 'محجوزة' }}</td>
+            <td>
+              <p-button
+                label="قطع"
+                icon="pi pi-times"
+                severity="danger"
+                [disabled]="meal.cut"
+                (onClick)="confirmCut(meal.id)"
+              />
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  }
+
+  <p-confirm-dialog />
+</div>

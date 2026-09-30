@@ -1,0 +1,71 @@
+<div dir="rtl">
+  <div class="card">
+    <h3>بطاقة المطبخ</h3>
+    <div class="fields">
+      <div class="field">
+        <label for="c1">اسم المطبخ</label>
+        <input pInputText id="c1" [(ngModel)]="name" />
+      </div>
+      <div class="field">
+        <label for="c2">موقع المطبخ</label>
+        <input pInputText id="c2" [(ngModel)]="site" />
+      </div>
+      <p-button label="اضافة الوجبات لأيام الاسبوع" (onClick)="onOpen()" />
+    </div>
+  </div>
+
+  @if (openDiv) {
+    <div class="card">
+      <h3>الفطور</h3>
+      <div class="week-grid">
+        @for (slot of breakfast; track $index) {
+          <div class="field">
+            <label>{{ slot.dayLabel }}</label>
+            <p-select
+              [options]="breakfastMeals"
+              optionLabel="ingredients"
+              [(ngModel)]="slot.mealOfCard"
+              placeholder="اختر الوجبة"
+            />
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>الغداء</h3>
+      <div class="week-grid">
+        @for (slot of lunch; track $index) {
+          <div class="field">
+            <label>{{ slot.dayLabel }}</label>
+            <p-select
+              [options]="lunchMeals"
+              optionLabel="ingredients"
+              [(ngModel)]="slot.mealOfCard"
+              placeholder="اختر الوجبة"
+            />
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>العشاء</h3>
+      <div class="week-grid">
+        @for (slot of dinner; track $index) {
+          <div class="field">
+            <label>{{ slot.dayLabel }}</label>
+            <p-select
+              [options]="dinnerMeals"
+              optionLabel="ingredients"
+              [(ngModel)]="slot.mealOfCard"
+              placeholder="اختر الوجبة"
+            />
+          </div>
+        }
+      </div>
+    </div>
+
+    <p-button label="حفظ" (onClick)="saveInDb()" />
+  }
+</div>

@@ -1,0 +1,35 @@
+<p-table dir="rtl" [value]="meals" dataKey="id">
+  <ng-template #header>
+    <tr>
+      <th>الصورة</th>
+      <th pSortableColumn="servingMeal">وقت تقديم الوجبة</th>
+      <th pSortableColumn="ingredients">المكونات</th>
+      <th pSortableColumn="price">السعر</th>
+      <th pSortableColumn="details">تفاصيل الوجبة</th>
+      <th style="width: 6rem"></th>
+      <th style="width: 6rem"></th>
+    </tr>
+  </ng-template>
+  <ng-template #body let-meal>
+    <tr>
+      <td>
+        <p-button icon="pi pi-eye" severity="secondary" (onClick)="showImage(meal.id)" />
+        <p-dialog header="الصورة" [(visible)]="imageDialogVisible[meal.id]" [modal]="true">
+          <img [src]="'/api/meal/' + meal.id + '/photo'" alt="الصورة" style="width: 50%" />
+        </p-dialog>
+      </td>
+      <td>{{ meal.servingMeal }}</td>
+      <td>{{ meal.ingredients }}</td>
+      <td>{{ meal.price }}</td>
+      <td>{{ meal.details }}</td>
+      <td>
+        <p-button icon="pi pi-trash" severity="danger" (onClick)="deleteMeal(meal)" />
+      </td>
+      <td>
+        <a [routerLink]="['/meals', meal.id, 'edit']">
+          <p-button icon="pi pi-pencil" />
+        </a>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

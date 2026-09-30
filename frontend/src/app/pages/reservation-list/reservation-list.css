@@ -1,0 +1,31 @@
+.toolbar {
+  margin-bottom: 12px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.dialog-actions {
+  display: flex;
+  gap: 8px;
+}
+
+::ng-deep .breakfast-event {
+  background-color: blue !important;
+  border-color: blue !important;
+}
+
+::ng-deep .lunch-event {
+  background-color: red !important;
+  border-color: red !important;
+}
+
+::ng-deep .dinner-event {
+  background-color: green !important;
+  border-color: green !important;
+}

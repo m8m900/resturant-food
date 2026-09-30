@@ -1,0 +1,7 @@
+<div class="form" dir="rtl">
+  <input pInputText [(ngModel)]="userId" placeholder="المستخدم" />
+  @if (errorMessage) {
+    <p-message severity="error">{{ errorMessage }}</p-message>
+  }
+  <p-button label="الحفظ" icon="pi pi-check" (onClick)="save()" />
+</div>

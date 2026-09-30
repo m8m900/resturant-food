@@ -1,0 +1,21 @@
+<div class="topbar">
+  <img class="logo-small" src="/images/img_1.png" alt="" />
+  <img class="logo-large" src="/images/img_2.png" alt="" />
+</div>
+
+<div class="login-layout">
+  <div class="login-form" dir="rtl">
+    <input pInputText class="field" [(ngModel)]="username" placeholder="اسم المستخدم" />
+    <p-password class="field" [(ngModel)]="password" [feedback]="false" [toggleMask]="true" placeholder="كلمة المرور" />
+    <p-button label="تسجيل الدخول" (onClick)="login()" styleClass="login-button" />
+  </div>
+
+  <div class="login-illustration">
+    <img src="/images/img.png" alt="" />
+  </div>
+</div>
+
+<div class="footer">
+  <h1>v1</h1>
+  <h1>قسم البرمجة</h1>
+</div>

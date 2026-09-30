@@ -20,7 +20,7 @@
     <!-- تسجيل المحول LocalTimeConverter -->
     <converter>
         <converter-id>localTimeConverter</converter-id>
-        <converter-class>order.controller.LocalTimeConverter</converter-class>
+        <converter-class>com.foodreservation.controller.order.LocalTimeConverter</converter-class>
 
     </converter>
 </faces-config>

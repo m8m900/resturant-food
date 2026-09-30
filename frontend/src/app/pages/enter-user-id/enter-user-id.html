@@ -1,0 +1,18 @@
+<div class="page" dir="rtl">
+  <div class="form">
+    <input
+      pInputText
+      class="field"
+      [(ngModel)]="userId"
+      placeholder="المستخدم"
+    />
+    @if (errorMessage) {
+      <p-message severity="error">{{ errorMessage }}</p-message>
+    }
+    <p-button
+      label="الذهاب الى الصفحة الرئيسية"
+      icon="pi pi-check"
+      (onClick)="goToOrderPage()"
+    />
+  </div>
+</div>

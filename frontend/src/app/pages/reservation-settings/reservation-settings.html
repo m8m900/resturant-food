@@ -1,0 +1,23 @@
+<p-panel header="إعدادات الحجز" dir="rtl">
+  <div class="grid">
+    <label for="breakfastStart">بداية الإفطار</label>
+    <p-datepicker id="breakfastStart" [(ngModel)]="settings.breakfastStart" timeOnly="true" />
+
+    <label for="breakfastEnd">نهاية الإفطار</label>
+    <p-datepicker id="breakfastEnd" [(ngModel)]="settings.breakfastEnd" timeOnly="true" />
+
+    <label for="lunchStart">بداية الغداء</label>
+    <p-datepicker id="lunchStart" [(ngModel)]="settings.lunchStart" timeOnly="true" />
+
+    <label for="lunchEnd">نهاية الغداء</label>
+    <p-datepicker id="lunchEnd" [(ngModel)]="settings.lunchEnd" timeOnly="true" />
+
+    <label for="dinnerStart">بداية العشاء</label>
+    <p-datepicker id="dinnerStart" [(ngModel)]="settings.dinnerStart" timeOnly="true" />
+
+    <label for="dinnerEnd">نهاية العشاء</label>
+    <p-datepicker id="dinnerEnd" [(ngModel)]="settings.dinnerEnd" timeOnly="true" />
+  </div>
+
+  <p-button label="حفظ" (onClick)="saveSettings()" />
+</p-panel>
