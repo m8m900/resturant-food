@@ -4,12 +4,10 @@ import com.foodreservation.model.day.DaysOfWeeks;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import com.foodreservation.model.meal.MealOfCard;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import org.hibernate.proxy.HibernateProxy;
 import java.io.Serializable;
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,27 +16,16 @@ import java.util.List;
 @Entity
 public class RestaurantOfCard implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "اسم المطعم مطلوب")
+    @Size(max = 100)
     private String name;
+
+    @NotBlank(message = "موقع المطعم مطلوب")
+    @Size(max = 100)
     private String site;
-
-
-
-    @Override
-    public final int hashCode() {
-        return this instanceof HibernateProxy ? ((HibernateProxy) this)
-                .getHibernateLazyInitializer().getPersistentClass().hashCode() : getClass().hashCode();
-    }
-
     @OneToMany(mappedBy = "restaurantOfCard", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<DaysOfWeeks> daysOfWeeks = new ArrayList<>();
 
-    @Override
-    public String toString() {
-        return "RestaurantOfCard{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-
-    }}
+ }

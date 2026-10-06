@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8cf5583-b851-438e-95ef-19ade5950b4e" name="Changes" comment="تكملة الحجز الوجبات" />
+    <list default="true" id="c8cf5583-b851-438e-95ef-19ade5950b4e" name="Changes" comment="تكملة الحجز الوجبات">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodreservation/dto/restaurantcard/RestaurantCardDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodreservation/dto/restaurantcard/RestaurantCardDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodreservation/model/restaurantcard/RestaurantOfCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodreservation/model/restaurantcard/RestaurantOfCard.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -327,6 +330,7 @@
       <workItem from="1790311542734" duration="2174000" />
       <workItem from="1790684047192" duration="17000" />
       <workItem from="1790783478056" duration="69000" />
+      <workItem from="1790805454453" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="تكملة الحجز الوجبات">
       <option name="closed" value="true" />

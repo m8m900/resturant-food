@@ -6,8 +6,6 @@ import jakarta.persistence.PersistenceContext;
 import com.foodreservation.model.meal.UploadedFileEntity;
 import com.foodreservation.service.AbstractFacade;
 
-import java.util.List;
-
 @Stateless
 public class FileUploadService extends AbstractFacade<UploadedFileEntity> {
     @PersistenceContext(unitName = "appPU")

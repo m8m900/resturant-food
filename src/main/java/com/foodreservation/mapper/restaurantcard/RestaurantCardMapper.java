@@ -6,12 +6,20 @@ import com.foodreservation.model.restaurantcard.RestaurantOfCard;
 public class RestaurantCardMapper {
 
     public static RestaurantCardDto toDto(RestaurantOfCard entity) {
-        // TODO: تحويل Entity -> DTO
-        return null;
+        RestaurantCardDto dto = new RestaurantCardDto();
+        dto.setId(entity.getId());
+        dto.setName(entity.getName());
+        dto.setSite(entity.getSite());
+        return dto;
+    
     }
 
     public static RestaurantOfCard toEntity(RestaurantCardDto dto) {
-        // TODO: تحويل DTO -> Entity
-        return null;
+
+        RestaurantOfCard entity = new RestaurantOfCard();
+        entity.setId(dto.getId());
+        entity.setName(dto.getName());
+        entity.setSite(dto.getSite());
+        return  entity;
     }
 }

@@ -12,7 +12,6 @@ import { MenuItem } from 'primeng/api';
 export class Layout {
   // نفس روابط menu.xhtml الأصلية
   menuItems: MenuItem[] = [
-    { label: 'الصفحة الرئيسية', icon: 'pi pi-home', routerLink: '/dashboard' },
     {
       label: 'الحجوزات',
       items: [{ label: 'اضافة الحجوزات', icon: 'pi pi-plus', routerLink: '/reservations' }],

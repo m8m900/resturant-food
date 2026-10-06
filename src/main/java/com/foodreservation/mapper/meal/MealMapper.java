@@ -6,12 +6,23 @@ import com.foodreservation.model.meal.MealOfCard;
 public class MealMapper {
 
     public static MealDto toDto(MealOfCard entity) {
-        // TODO: تحويل Entity -> DTO
-        return null;
+        MealDto dto = new MealDto();
+        dto.setId(entity.getId());
+        dto.setIngredients(entity.getIngredients());
+        dto.setPrice(entity.getPrice());
+        dto.setDetails(entity.getDetails());
+        dto.setMealType(entity.getMealType());
+        return dto;
+        
     }
 
     public static MealOfCard toEntity(MealDto dto) {
-        // TODO: تحويل DTO -> Entity
-        return null;
+       MealOfCard entity = new MealOfCard();
+        entity.setId(dto.getId());
+        entity.setIngredients(dto.getIngredients());
+        entity.setPrice(dto.getPrice());
+        entity.setDetails(dto.getDetails());
+        entity.setMealType(dto.getMealType());
+        return entity;
     }
 }

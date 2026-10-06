@@ -1,5 +1,7 @@
 package com.foodreservation.model.meal;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,29 +15,12 @@ public class UploadedFileEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank(message = "مسار الملف مطلوب")
     private String filePath;
 
+    @NotNull(message = "لازم تربط الصورة بوجبة")
     @ManyToOne
     @JoinColumn(name = "meal_card_id")
-    private MealOfCard meal_card;
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        UploadedFileEntity that = (UploadedFileEntity) o;
-        return Objects.equals(id, that.id);
-    }
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-    @Override
-    public String toString() {
-        return "UploadedFileEntity{" +
-                "id=" + id +
-                ", filePath='" + filePath + '\'' +
-                '}';
-    }
+    private MealOfCard mealOfCard;
 }

@@ -7,6 +7,9 @@ import com.foodreservation.model.meal.MealOfCard;
 import com.foodreservation.model.restaurantcard.RestaurantOfCard;
 import java.io.Serializable;
 import java.time.LocalDate;
+import com.foodreservation.model.common.MealType;
+import jakarta.validation.constraints.NotNull;
+
 
 @Entity
 @Getter
@@ -15,26 +18,22 @@ public class DaysOfWeeks implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String orderOfType;
-    @Transient
+
+    @NotNull(message = "التاريخ مطلوب")
     private LocalDate date;
 
-    @Transient
-    private MealOfCard tempMealOfCard;
-
+    @NotNull(message = "لازم تحدد الوجبة")
     @ManyToOne
     @JoinColumn(name = "meal_of_card_id")
     private MealOfCard mealOfCard;
 
+    @NotNull(message = "لازم تحدد المطعم")
     @ManyToOne
     @JoinColumn(name = "restaurant_of_card_id")
     private RestaurantOfCard restaurantOfCard;
 
-    public void setMealOfCard(MealOfCard mealOfCard) {
-        if(mealOfCard != null){
-            this.tempMealOfCard = mealOfCard;
-            this.mealOfCard = tempMealOfCard;
-        }
+    @NotNull(message = "نوع الوجبة مطلوب")
+    @Enumerated(EnumType.STRING)
+    private MealType mealType;
 
-    }
 }

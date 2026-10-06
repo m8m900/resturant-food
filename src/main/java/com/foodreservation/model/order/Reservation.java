@@ -1,13 +1,14 @@
 package com.foodreservation.model.order;
 
-import com.foodreservation.model.cutmeal.MealCut;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import com.foodreservation.model.day.DaysOfWeeks;
+import jakarta.validation.constraints.NotNull;
+
+
 
 @Entity
 @Getter
@@ -16,11 +17,20 @@ public class Reservation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String orderType; // نوع الوجبة (إفطار، غداء، عشاء)
+
+    @NotNull(message = "وقت بداية الحجز مطلوب")
     private LocalDateTime reservationTime;
+
+    @NotNull(message = "وقت نهاية الحجز مطلوب")
     private LocalDateTime endTime;
 
-    @OneToMany(mappedBy = "reservation", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<MealCut> mealCuts = new ArrayList<>();
+    private boolean cut;
+    private LocalDateTime cutTime; // وقت الاستلام
+
+    // نوع الوجبة يُقرأ من daysOfWeeks.getMealType() - ما نكرره هنا
+    @NotNull(message = "لازم تربط الحجز بيوم/وجبة/مطعم محدد")
+    @ManyToOne
+    @JoinColumn(name = "days_of_weeks_id")
+    private DaysOfWeeks daysOfWeeks;
 
 }
