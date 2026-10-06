@@ -38,11 +38,11 @@ public List<DayDto> getAll(){
 @GET 
 @Path("/{id}")
 public Response getById(@PathParam("id") Long id) {
-    DaysOfWeeks entity = daysOfWeeksService.findById(id);
-    if (entity == null) {
+    DaysOfWeeks daysOfWeeks = daysOfWeeksService.findById(id);
+    if (daysOfWeeks == null) {
         return Response.status(Response.Status.NOT_FOUND).build();
     }
-    return Response.ok(DayMapper.toDto(entity)).build();
+    return Response.ok(DayMapper.toDto(daysOfWeeks)).build();
 }
 @POST 
 public Response create(@Valid DayDto dto){
@@ -59,8 +59,8 @@ public Response create(@Valid DayDto dto){
 @PUT
 @Path("/{id}")
 public Response update(@PathParam("id") Long id, @Valid DayDto dto) {
-    DaysOfWeeks entity = daysOfWeeksService.findById(id);
-    if (entity == null) {
+    DaysOfWeeks daysOfWeeks = daysOfWeeksService.findById(id);
+    if (daysOfWeeks == null) {
         return Response.status(Response.Status.NOT_FOUND).build();
     }
     MealOfCard mealOfCard = mealCardFacade.findById(dto.getMealOfCardId());
@@ -70,21 +70,21 @@ public Response update(@PathParam("id") Long id, @Valid DayDto dto) {
                 .entity("المطعم غير مسجل او الوجبة غير متوفرة")
                 .build();
     }
-    entity.setDate(dto.getDate());
-    entity.setMealType(dto.getMealType());
-    entity.setMealOfCard(mealOfCard);
-    entity.setRestaurantOfCard(restaurantOfCard);
-    daysOfWeeksService.create(entity);
-    return Response.ok(DayMapper.toDto(entity)).build();
+    daysOfWeeks.setDate(dto.getDate());
+    daysOfWeeks.setMealType(dto.getMealType());
+    daysOfWeeks.setMealOfCard(mealOfCard);
+    daysOfWeeks.setRestaurantOfCard(restaurantOfCard);
+    daysOfWeeksService.create(daysOfWeeks);
+    return Response.ok(DayMapper.toDto(daysOfWeeks)).build();
 }
 @DELETE
 @Path("/{id}")
 public Response delete(@PathParam("id") Long id) {
-    DaysOfWeeks entity = daysOfWeeksService.findById(id);
-    if (entity == null) {
+    DaysOfWeeks daysOfWeeks = daysOfWeeksService.findById(id);
+    if (daysOfWeeks == null) {
         return Response.status(Response.Status.NOT_FOUND).build();
     }
-    daysOfWeeksService.remove(entity);
+    daysOfWeeksService.remove(daysOfWeeks);
     return Response.noContent().build();
 }
 
